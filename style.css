@@ -200,3 +200,26 @@ ul + ul {
   border-radius: 0.125rem;
   margin-top: 0;
 }
+
+/********* "Play-Button in Container-Liste in Last-Lesson-Recordings"********/
+
+.play-button {
+  background-color: var(--main-background-color);
+  border: 0.1rem solid #6a1cc3;
+  border-radius: 0.125rem;
+  color: var(--main-text-color);
+  font-weight: 600;
+  width: 4.25rem;
+  height: 2.25rem;
+  font-size: 1rem;
+  margin: 0.4em 0.2em;
+  cursor: pointer;
+  position: relative;
+  bottom: 1.7em;
+  margin-left: 14em;
+}
+
+.play-button:hover {
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
+}
