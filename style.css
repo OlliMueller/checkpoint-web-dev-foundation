@@ -144,7 +144,7 @@ p,
   opacity: 40%;
 }
 
-/********* "Last-Lesson-Recordings"-Bereich mit vier Elementen ********/
+/********* Headin zu "Last-Lesson-Recordings" ********/
 
 .container-lesson-recordings {
   display: flex;
@@ -157,4 +157,46 @@ p,
 
 .amount-videos {
   padding-left: 7.5em;
+}
+
+/********* "Last-Lesson-Recordings"-Bereich mit vier Elementen ********/
+
+.container-liste {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-four-lists {
+  position: relative;
+  top: 1em;
+}
+
+.container-top-two-lists {
+  position: relative;
+  bottom: 1em;
+  padding-top: 0.55em;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 1em;
+}
+
+ul + ul {
+  margin-top: 1rem;
+}
+
+.listen-elemente > ul {
+  display: grid;
+  width: 20rem;
+  height: 7rem;
+  background-color: var(--main-background-color);
+  font-family: "Source Sans Pro", sans-serif;
+  color: var(--main-text-color);
+  grid-template-columns: 1fr;
+  border: 0.1rem solid var(--main-text-color);
+  border-radius: 0.125rem;
+  margin-top: 0;
 }
