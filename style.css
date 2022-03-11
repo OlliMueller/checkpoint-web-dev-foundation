@@ -59,7 +59,6 @@ p {
   height: 6rem;
   background-color: var(--header-background-color);
   color: var(--header-text-color);
-  _margin: 0 auto;
   text-transform: uppercase;
   padding-top: 2rem;
 }
@@ -74,7 +73,6 @@ p {
 
 .title-recordings {
   text-transform: uppercase;
-  margin-top: 1rem;
   margin-bottom: 0.25rem;
   padding-right: 12.5rem;
 }
@@ -132,7 +130,6 @@ p {
 }
 
 .list-dates {
-  position: relative;
   padding-bottom: 1em;
   padding-top: 0.5em;
 }
