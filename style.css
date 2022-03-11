@@ -1,32 +1,10 @@
-/**************************************************************/
-/* General Styling */
+/****************** General Styling *****************/
 * {
   box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", sans-serif;
-}
-
-h1 {
-  font-size: 1.5rem;
-}
-
-h2 {
-  font-size: 1rem;
-}
-
-h3 {
-  font-size: 0.9rem;
-}
-
 html {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   background-color: var(--main-background-color);
   color: var(--main-text-color);
@@ -37,16 +15,42 @@ body {
   margin: 0 auto;
   --header-text-color: #fbfbfb;
   --header-background-color: #6a1cc3;
-  --header-accent-color: #8849cf; /* Opacity für den Header */
+  --header-accent-color: #8849cf;
   --main-text-color: #6a1cc3;
   --main-background-color: #fbfbfb;
 }
 
-p,
-.listen-elemente {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 0.9rem;
+h1 {
+  font-size: 1.5rem;
 }
+
+h2 {
+  font-size: 1rem;
+  color: var(--main-text-color);
+}
+
+h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+p {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/****************** Flex-Container *****************/
+
+.container-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 0.5rem;
+}
+
+/****************** Header-Bereich *****************/
 
 .header {
   display: flex;
@@ -55,7 +59,7 @@ p,
   height: 6rem;
   background-color: var(--header-background-color);
   color: var(--header-text-color);
-  margin: 0 auto;
+  _margin: 0 auto;
   text-transform: uppercase;
   padding-top: 2rem;
 }
@@ -68,29 +72,18 @@ p,
 
 /********* "Recordings"-Bereich ********/
 
-.container-header-recordings {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1rem;
-}
-
 .title-recordings {
-  color: var(--main-text-color);
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
   padding-right: 12.5rem;
 }
 
 .subtitle-recordings {
-  color: rgba(0, 0, 0, 0.6);
-  font-family: "Montserrat", sans-serif;
   margin: 0;
-  margin-top: 0.25rem;
 }
 
-/********* Search-Bar "Recordings"-Bereich ********/
+/********* "Recordings-"Bereich mit Search-Bar ********/
 
 .container-searchbar {
   width: 20rem;
@@ -117,92 +110,32 @@ p,
   opacity: 40%;
 }
 
-/********* Search-Bar "Recordings"-Bereich ********/
+/********* "Last-Lesson-Recordings"-Bereich mit Play-Button ********/
 
-.container-searchbar {
-  width: 20rem;
-  height: 2.25rem;
-  border: 0.1rem solid var(--main-text-color);
-  border-radius: 0.125rem;
-  margin-top: 0.5rem;
+.last-lesson-header {
+  padding-left: 8.5em;
 }
 
-.lupen-element {
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-}
-
-.searchbar {
-  border: none;
-  color: var(--main-text-color);
-  font-size: 0.8rem;
-}
-
-::placeholder {
-  color: #4b148a;
-  opacity: 40%;
-}
-
-/********* Headin zu "Last-Lesson-Recordings" ********/
-
-.container-lesson-recordings {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 0.8rem;
-  color: rgba(0, 0, 0, 0.6);
-  font-family: "Montserrat", sans-serif;
-}
-
-.amount-videos {
-  padding-left: 7.5em;
-}
-
-/********* "Last-Lesson-Recordings"-Bereich mit vier Elementen ********/
-
-.container-liste {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 2rem;
-}
-
-.container-four-lists {
-  position: relative;
-  top: 1em;
-}
-
-.container-top-two-lists {
-  position: relative;
-  bottom: 1em;
-  padding-top: 0.55em;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 1em;
-}
-
-ul + ul {
-  margin-top: 1rem;
-}
-
-.listen-elemente > ul {
+.list-elements > ul {
   display: grid;
   width: 20rem;
   height: 7rem;
+  list-style-type: none;
   background-color: var(--main-background-color);
   font-family: "Source Sans Pro", sans-serif;
   color: var(--main-text-color);
-  grid-template-columns: 1fr;
   border: 0.1rem solid var(--main-text-color);
   border-radius: 0.125rem;
+  box-shadow: 3px 3px var(--main-text-color);
   margin-top: 0;
+  padding-left: 1em;
 }
 
-/********* "Play-Button in Container-Liste in Last-Lesson-Recordings"********/
+.list-dates {
+  position: relative;
+  padding-bottom: 1em;
+  padding-top: 0.5em;
+}
 
 .play-button {
   background-color: var(--main-background-color);
@@ -216,7 +149,7 @@ ul + ul {
   margin: 0.4em 0.2em;
   cursor: pointer;
   position: relative;
-  bottom: 1.7em;
+  bottom: 2.7em;
   margin-left: 14em;
 }
 
